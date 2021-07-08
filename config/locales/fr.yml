@@ -304,84 +304,12 @@ fr:
         name: Formulaire de vérification d'identité - MEL
       osp_authorization_workflow:
         name: Procédure d'autorisation
-    devise:
-      registrations:
-        new:
-          newsletter: Recevoir les actualités à venir des participations par la newsletter <a href="mailto:participationcitoyenne@lillemetropole.fr">participationcitoyenne@lillemetropole.fr</a>
-          sign_up_as:
-            user: Citoyen
-          subtitle: Inscrivez-vous pour participer et débattre sur la plateforme.
-      sessions:
-        new:
-          are_you_new?: Nouveau sur la plateforme ?
-    features:
-      proposals:
-        actions:
-          vote: Soutenir
-        settings:
-          global:
-            vote_limit: Nombre maximum de soutiens par utilisateur
-          step:
-            votes_blocked: Soutiens bloqués
-            votes_enabled: Soutiens activés
-            votes_hidden: Cacher le compteur de soutiens
-    menu:
-      assemblies: Agora
-      processes: Participer
-    participatory_process_groups:
-      show:
-        group_participatory_processes: 'Participation pour %{group}'
-        title: Groupes de participations
-    participatory_process_steps:
-      index:
-        process_steps: Etapes de la participation
-        title: Etapes de la participation
-    participatory_processes:
-      admin:
-        participatory_process_copies:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-        participatory_processes:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-      index:
-        title: Participation
-      order_by_processes:
-        active: Actives
-        all: Toutes
-        past: Passées
-      pages:
-        home:
-          highlighted_processes:
-            active_processes: Participations en cours
-            see_all_processes: Voir toutes les participations
-      show:
-        developer_group: Promoteur
-        local_area: Périmètre
-        participatory_scope: Objectif
-        participatory_structure: Modalités
-        meta_scope: Échelle
-        target: Participants
-    proposals:
-      answers:
-        not_answered: En attente de réponse
-      proposals:
-        filters:
-          voted: Soutenues
-        orders:
-          most_voted: Les plus soutenues
-          recent: Les plus récentes
-        vote_button:
-          already_voted: Soutenue
-          already_voted_hover: Ne plus soutenir
-          maximum_votes_reached: Nombre maximum de soutiens atteint
-          vote: Soutenir
-        votes_count:
-          count:
-            one: SOUTIEN
-            other: SOUTIENS
-    scopes:
-      global: Toute la métropole
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            Cet amendement pour le %{amendable_type} %{proposal_link}
+            est en cours d’évaluation.
     verifications:
       authorizations:
         first_login:
@@ -418,18 +346,6 @@ fr:
         assembly_menu_item: Présentation
       footer:
         download_open_data: Données ouvertes
-      participatory_processes:
-        index:
-          promoted_processes: Participations mises en avant
-        order_by_processes:
-          processes:
-            one: '%{count} participation'
-            other: '%{count} participations'
-      process_header:
-        process_menu_item: La participation
-  pages:
-    home:
-      extended:
-        how_to_participate: Comment participer ?
-      statistics:
-        assemblies_count: Agora
+  faker:
+    address:
+      country_code: ['FR','FR0','FR1','FR2','FR3','FR4','FR5','FR6','FR7','FR8','FR9']

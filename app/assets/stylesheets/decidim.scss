@@ -203,6 +203,10 @@ $blue: #47A5B8;
   }
 }
 
+.topbar div {
+  align-items: center;
+}
+
 .main-footer .row {
   display: flex;
   align-items: center;
@@ -223,6 +227,7 @@ $blue: #47A5B8;
 
   img {
     height: 1rem;
+    margin-top: -0.25rem;
   }
 
   .mf-text {
