@@ -2,11 +2,11 @@
 
 source "https://rubygems.org"
 
-DECIDIM_VERSION = "0.24.2"
+DECIDIM_VERSION = "release/0.24-stable"
 
 ruby RUBY_VERSION
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", git: "https://github.com/decidim/decidim.git", branch: DECIDIM_VERSION
 # gem "decidim", path: "../decidim"
 
 # gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
@@ -14,7 +14,6 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-initiatives", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 
 gem "decidim-decidim_awesome", "~> 0.7.0"
-gem "decidim-navbar_links", git: "https://github.com/OpenSourcePolitics/decidim-module-navbar_links.git", branch: "release/0.24-stable"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git", branch: "master"
 
 # gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar"
@@ -43,7 +42,7 @@ gem "sprockets", "~> 3.7"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", git: "https://github.com/decidim/decidim.git", branch: DECIDIM_VERSION
   # gem "decidim-dev", path: "../decidim"
 end
 
