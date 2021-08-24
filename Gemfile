@@ -43,6 +43,7 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "decidim-dev", git: "https://github.com/decidim/decidim.git", branch: DECIDIM_VERSION
+  gem "rubocop-faker"
   # gem "decidim-dev", path: "../decidim"
 end
 
@@ -55,15 +56,15 @@ end
 
 group :production do
   # gem "rubocop-rails"
-  gem "passenger"
-  gem "fog-aws"
   gem "dalli"
-  gem "sendgrid-ruby"
-  gem "newrelic_rpm"
+  gem "fog-aws"
   gem "lograge"
+  gem "newrelic_rpm"
+  gem "passenger"
+  gem "sendgrid-ruby"
+  gem "sentry-rails"
+  gem "sentry-ruby"
+  gem "sentry-sidekiq"
   gem "sidekiq"
   gem "sidekiq-scheduler"
-  gem "sentry-ruby"
-  gem "sentry-rails"
-  gem "sentry-sidekiq"
 end
