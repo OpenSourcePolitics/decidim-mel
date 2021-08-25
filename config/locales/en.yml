@@ -1,5 +1,16 @@
 ---
 en:
+  decidim:
+    authorization_handlers:
+      mel_authorization_handler:
+        name: Identity Verification Form - MEL
+      mel_authorization_workflow:
+        name: Authorization process
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            mel_authorization_handler: Identity Verification Form - MEL
   layouts:
     decidim:
       footer:
