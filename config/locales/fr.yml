@@ -1,3 +1,4 @@
+---
 fr:
   activemodel:
     attributes:
@@ -14,23 +15,23 @@ fr:
       close_meeting:
         closing_report: Compte rendu
       mel_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       osp_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       participatory_process:
-        participatory_process_group_id: Groupe de participations
         developer_group: Promoteur
         local_area: Périmètre
         meta_scope: Échelle
+        participatory_process_group_id: Groupe de participations
         participatory_scope: Objectif
         participatory_structure: Modalités
         private_space: Espace privé
-        target: Participants
         promoted: Mise en avant
+        target: Participants
       participatory_process_group:
         participatory_process_ids: Participations liées
       proposal:
@@ -167,21 +168,6 @@ fr:
         update:
           error: Une erreur s'est produite lors de la mise à jour de ce lien.
           success: Lien mis à jour avec succès
-      participatory_processes:
-        create:
-          error: Une erreur s'est produite lors de la création d'une nouvelle participation.
-          success: Participation créée avec succès. Configurez maintenant ses étapes.
-        destroy:
-          success: Participation supprimée avec succès.
-        index:
-          not_published: Non publiée
-          published: Publiée
-          title: Nouvelle participation
-        new:
-          title: nouvelle participation
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de cette participation.
-          success: Participation mise à jour avec succès.
       participatory_process_copies:
         new:
           title: Dupliquer la participation
@@ -242,6 +228,21 @@ fr:
         update:
           error: Une erreur s'est produite lors de la mise à jour d'un utilisateur pour cette participation.
           success: L'utilisateur a été mis à jour avec succès pour cette participation.
+      participatory_processes:
+        create:
+          error: Une erreur s'est produite lors de la création d'une nouvelle participation.
+          success: Participation créée avec succès. Configurez maintenant ses étapes.
+        destroy:
+          success: Participation supprimée avec succès.
+        index:
+          not_published: Non publiée
+          published: Publiée
+          title: Nouvelle participation
+        new:
+          title: nouvelle participation
+        update:
+          error: Une erreur s'est produite lors de la mise à jour de cette participation.
+          success: Participation mise à jour avec succès.
       participatory_processes_copies:
         create:
           error: Une erreur s'est produite lors de la duplication de cette participation.
@@ -255,6 +256,12 @@ fr:
         navbar_links: Liens de navigation
         participatory_process_groups: Groupes de participations
         participatory_processes: Participations
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            Cet amendement pour le %{amendable_type} %{proposal_link}
+            est en cours d’évaluation.
     application:
       documents:
         related_documents: Documents à consulter
@@ -278,10 +285,10 @@ fr:
         children: Agora
         developer_group: Promoteur
         local_area: Périmètre
+        meta_scope: Échelle
         participatory_scope: Objectif
         participatory_structure: Modalités
         private_space: Ceci est une agora privée
-        meta_scope: Échelle
         target: Participants
       statistics:
         assemblies_count: Agora
@@ -289,27 +296,21 @@ fr:
       mel_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - MEL
       mel_authorization_workflow:
         name: Procédure d'autorisation
       osp_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - MEL
       osp_authorization_workflow:
         name: Procédure d'autorisation
-    amendments:
-      emendation:
-        announcement:
-          evaluating: |-
-            Cet amendement pour le %{amendable_type} %{proposal_link}
-            est en cours d’évaluation.
     verifications:
       authorizations:
         first_login:
@@ -333,6 +334,20 @@ fr:
     mailer:
       invite_private_user:
         subject: Vous avez été invité à une agora privée sur %{organization}
+  faker:
+    address:
+      country_code:
+      - FR
+      - FR0
+      - FR1
+      - FR2
+      - FR3
+      - FR4
+      - FR5
+      - FR6
+      - FR7
+      - FR8
+      - FR9
   layouts:
     decidim:
       assemblies:
@@ -340,12 +355,9 @@ fr:
           promoted_assemblies: Agora mise en avant
         order_by_assemblies:
           assemblies:
-            one: '%{count} agora'
-            other: '%{count} agora'
+            one: "%{count} agora"
+            other: "%{count} agora"
       assembly_header:
         assembly_menu_item: Présentation
       footer:
         download_open_data: Données ouvertes
-  faker:
-    address:
-      country_code: ['FR','FR0','FR1','FR2','FR3','FR4','FR5','FR6','FR7','FR8','FR9']

@@ -1,0 +1,254 @@
+# i18n-tasks finds and manages missing and unused translations: https://github.com/glebm/i18n-tasks
+
+# The "main" locale.
+base_locale: en
+
+## Reporting locale, default: en. Available: en, ru.
+# internal_locale: en
+
+# Read and write translations.
+data:
+  ## Translations are read from the file system. Supported format: YAML, JSON.
+  ## Provide a custom adapter:
+  # adapter: I18n::Tasks::Data::FileSystem
+
+  # Locale files or `File.find` patterns where translations are read from:
+  read:
+    - config/locales/%{locale}.yml
+
+  # Locale files to write new keys to, based on a list of key pattern => file rules. Matched from top to bottom:
+  # `i18n-tasks normalize -p` will force move the keys according to these rules
+  write:
+    - config/locales/%{locale}.yml
+
+  ## Specify the router (see Readme for details). Valid values: conservative_router, pattern_router, or a custom class.
+  # router: convervative_router
+
+  yaml:
+    write:
+      # do not wrap lines at 80 characters
+      line_width: -1
+
+  ## Pretty-print JSON:
+  # json:
+  #   write:
+  #     indent: '  '
+  #     space: ' '
+  #     object_nl: "\n"
+  #     array_nl: "\n"
+
+# Find translate calls
+search:
+  ## Paths or `File.find` patterns to search in:
+  paths:
+    - app
+    - lib
+
+  # Root directories for relative keys resolution.
+  relative_roots:
+    - app/controllers
+    - app/helpers
+    - app/mailers
+    - app/presenters
+    - app/services
+    - app/views
+    - app/cells
+
+  ## Files or `File.fnmatch` patterns to exclude from search. Some files are always excluded regardless of this setting:
+  ##   %w(*.jpg *.png *.gif *.svg *.ico *.eot *.otf *.ttf *.woff *.woff2 *.pdf *.css *.sass *.scss *.less *.yml *.json)
+  exclude:
+    - "*.jpeg"
+    - "*.odt"
+    - "*.docx"
+
+  ## Alternatively, the only files or `File.fnmatch patterns` to search in `paths`:
+  ## If specified, this settings takes priority over `exclude`, but `exclude` still applies.
+  # only: ["*.rb", "*.html.slim"]
+
+  ## If `strict` is `false`, guess usages such as t("categories.#{category}.title"). The default is `true`.
+  strict: false
+
+  ## Multiple scanners can be used. Their results are merged.
+  ## The options specified above are passed down to each scanner. Per-scanner options can be specified as well.
+  ## See this example of a custom scanner: https://github.com/glebm/i18n-tasks/wiki/A-custom-scanner-example
+
+## Google Translate
+# translation:
+#   # Get an API key and set billing info at https://code.google.com/apis/console to use Google Translate
+#   api_key: "AbC-dEf5"
+
+translation:
+  deepl_api_key: <%= ENV["DEEPL_API_KEY"] %>
+
+# Do not consider these keys missing:
+ignore_missing:
+ - faker.*
+ - layouts.decidim.participatory_processes.promoted_process.*
+ - layouts.decidim.footer.*
+ - layouts.decidim.header.*
+ - layouts.decidim.user_menu.*
+ - layouts.decidim.assemblies.index.promoted_assemblies
+ - layouts.decidim.assembly_header.assembly_menu_item
+ - decidim.admin.participatory_space_private_users.create.*
+ - decidim.admin.actions.new_assembly
+ - decidim.admin.actions.participatory_process.new
+ - decidim.admin.assemblies.*
+ - decidim.admin.assembly_members.*
+ - decidim.admin.assembly_publications.*
+ - decidim.admin.assembly_user_roles.*
+ - decidim.admin.menu.assemblies
+ - decidim.admin.menu.assemblies_submenu.assembly_admins
+ - decidim.admin.menu.navbar_links
+ - decidim.admin.menu.participatory_process_groups
+ - decidim.admin.menu.participatory_processes
+ - decidim.admin.menu.participatory_processes_submenu.features
+ - decidim.admin.menu.participatory_processes_submenu.process_admins
+ - decidim.admin.models.assembly.name
+ - decidim.admin.models.assembly_user_role.name
+ - decidim.admin.models.navbar_link.fields.*
+ - decidim.admin.models.participatory_process.fields.*
+ - decidim.admin.models.participatory_process.name
+ - decidim.admin.models.participatory_process_group.name
+ - decidim.admin.models.participatory_process_user_role.name
+ - decidim.admin.navbar_links.create.error
+ - decidim.admin.navbar_links.create.success
+ - decidim.admin.navbar_links.destroy.success
+ - decidim.admin.navbar_links.*
+ - decidim.admin.participatory_process_copies.new.title
+ - decidim.admin.participatory_process_groups.*
+ - decidim.admin.participatory_process_publications.*
+ - decidim.admin.participatory_process_step_activations.*
+ - decidim.admin.participatory_process_steps.create.error
+ - decidim.admin.participatory_process_steps.*
+ - decidim.admin.participatory_process_user_roles.*
+ - decidim.admin.participatory_processes.*
+ - decidim.admin.participatory_processes_copies.*
+ - decidim.admin.participatory_processes_group.*
+ - decidim.admin.titles.assemblies
+ - decidim.admin.titles.navbar_links
+ - decidim.admin.titles.participatory_process_groups
+ - decidim.admin.titles.participatory_processes
+ - decidim.amendments.emendation.announcement.evaluating
+ - decidim.application.documents.related_documents
+ - decidim.assemblies.admin.assemblies.form.*
+ - decidim.assemblies.index.title
+ - decidim.assemblies.pages.home.highlighted_assemblies.active_assemblies
+ - decidim.assemblies.pages.home.highlighted_assemblies.see_all_assemblies
+ - decidim.assemblies.show.*
+ - decidim.assemblies.statistics.assemblies_count
+ - decidim.authorization_handlers.mel_authorization_handler.explanation
+ - decidim.authorization_handlers.mel_authorization_handler.fields.birthday
+ - decidim.authorization_handlers.mel_authorization_handler.fields.document_number
+ - decidim.authorization_handlers.mel_authorization_handler.fields.postal_code
+ - decidim.authorization_handlers.mel_authorization_handler.name
+ - decidim.authorization_handlers.mel_authorization_workflow.name
+ - decidim.authorization_handlers.osp_authorization_handler.explanation
+ - decidim.authorization_handlers.osp_authorization_handler.fields.birthday
+ - decidim.authorization_handlers.osp_authorization_handler.fields.document_number
+ - decidim.authorization_handlers.osp_authorization_handler.fields.postal_code
+ - decidim.authorization_handlers.osp_authorization_handler.name
+ - decidim.authorization_handlers.osp_authorization_workflow.name
+ - decidim.verifications.authorizations.first_login.actions.mel_authorization_handler
+ - decidim.verifications.authorizations.first_login.actions.mel_authorization_workflow
+ - decidim.verifications.authorizations.first_login.actions.osp_authorization_handler
+ - decidim.verifications.authorizations.first_login.actions.osp_authorization_workflow
+ - activemodel.attributes.assembly.*
+ - activemodel.attributes.close_meeting.closing_report
+ - activemodel.attributes.mel_authorization_handler.birthday
+ - activemodel.attributes.mel_authorization_handler.document_number
+ - activemodel.attributes.mel_authorization_handler.postal_code
+ - activemodel.attributes.osp_authorization_handler.birthday
+ - activemodel.attributes.osp_authorization_handler.document_number
+ - activemodel.attributes.osp_authorization_handler.postal_code
+ - activemodel.attributes.participatory_process.developer_group
+ - activemodel.attributes.participatory_process.*
+ - activemodel.attributes.participatory_process_group.participatory_process_ids
+ - activemodel.attributes.proposal.address
+ - activemodel.attributes.proposal.has_address
+ - activemodel.attributes.scope.scope_type
+ - activemodel.attributes.user.nickname
+ - activerecord.attributes.decidim/participatory_process.*
+ - activerecord.models.decidim/assembly*
+ - devise.failure.user.already_authenticated
+ - devise.failure.user.*
+ - devise.mailer.invite_private_user.subject
+ - layouts.decidim.participatory_processes.promoted_process.more_info
+ - layouts.decidim.participatory_processes.promoted_process.active_step
+ - layouts.decidim.footer.made_with_open_source
+ - layouts.decidim.header.*
+ - layouts.decidim.user_menu.*
+ - layouts.decidim.assemblies.order_by_assemblies.*
+ - decidim.admin.participatory_space_private_users.create.success
+ - decidim.admin.participatory_space_private_users.create.error
+
+# Consider these keys used:
+ignore_unused:
+  - faker.*
+  - activemodel.attributes.osp_authorization_handler.*
+  - decidim.authorization_handlers.osp_authorization_handler.*
+  - decidim.authorization_handlers.osp_authorization_workflow.*
+  - decidim.verifications.authorizations.first_login.actions.osp_authorization_handler
+  - decidim.verifications.authorizations.first_login.actions.osp_authorization_workflow
+  - activemodel.attributes.participatory_process.private_space
+  - decidim.amendments.emendation.announcement.evaluating
+  - activemodel.attributes.assembly.*
+  - activemodel.attributes.close_meeting.closing_report
+  - activemodel.attributes.mel_authorization_handler.*
+  - activemodel.attributes.participatory_process.*
+  - activemodel.attributes.participatory_process_group.participatory_process_ids
+  - activemodel.attributes.proposal.*
+  - activemodel.attributes.scope.scope_type
+  - activemodel.attributes.user.nickname
+  - activerecord.attributes.decidim/participatory_process.*
+  - activerecord.models.decidim/*
+  - decidim.admin.actions.new_assembly
+  - decidim.admin.actions.participatory_process.new
+  - decidim.admin.assemblies.*
+  - decidim.admin.assembly_members.*
+  - decidim.admin.assembly_members.*
+  - decidim.admin.assembly_publications.*
+  - decidim.admin.assembly_user_roles.*
+  - decidim.admin.menu.assemblies
+  - decidim.admin.menu.assemblies_submenu.assembly_admins
+  - decidim.admin.menu.navbar_links
+  - decidim.admin.menu.participatory_process_groups
+  - decidim.admin.menu.participatory_processes
+  - decidim.admin.menu.participatory_processes_submenu.*
+  - decidim.admin.models.assembly.name
+  - decidim.admin.models.assembly_user_role.name
+  - decidim.admin.models.navbar_link.fields.*
+  - decidim.admin.models.participatory_process.fields.*
+  - decidim.admin.models.participatory_process.name
+  - decidim.admin.models.participatory_process_group.name
+  - decidim.admin.models.participatory_process_user_role.name
+  - decidim.admin.navbar_links.*
+  - decidim.admin.participatory_process_copies.new.title
+  - decidim.admin.participatory_processes_copies.*
+  - decidim.admin.participatory_process_groups.*
+  - decidim.admin.participatory_processes_group.create.*
+  - decidim.admin.participatory_process_publications.*
+  - decidim.admin.participatory_process_step_activations.*
+  - decidim.admin.participatory_process_steps.*
+  - decidim.admin.participatory_process_user_roles.*
+  - decidim.admin.participatory_processes.*
+  - decidim.admin.titles.*
+  - decidim.admin.titles.*
+  - decidim.application.documents.related_documents
+  - decidim.assemblies.admin.assemblies.form.*
+  - decidim.assemblies.index.title
+  - decidim.assemblies.pages.home.highlighted_assemblies.*
+  - decidim.assemblies.show.*
+  - decidim.assemblies.statistics.assemblies_count
+  - decidim.authorization_handlers.mel_authorization_handler*
+  - decidim.authorization_handlers.mel_authorization_workflow.name
+  - decidim.verifications.authorizations.first_login.actions.mel_authorization_handler
+  - decidim.verifications.authorizations.first_login.actions.mel_authorization_workflow
+  - devise.failure.user.already_authenticated
+  - devise.failure.user.*
+  - devise.mailer.invite_private_user.subject
+  - layouts.decidim.assemblies.index.promoted_assemblies
+  - layouts.decidim.assemblies.order_by_assemblies.*
+  - layouts.decidim.assembly_header.assembly_menu_item
+
+
+
