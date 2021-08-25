@@ -11,5 +11,11 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require_tree .
+//
+//= require cable
+//= require_tree ./channels
+//
 //= require decidim
+//
+// Our custom code goes after the application code
+//= require_tree ./decidim
