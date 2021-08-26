@@ -1,0 +1,65 @@
+<table class="main container">
+  <tr>
+    <td class="decidim-bar">
+      <table class="row collapse">
+        <tr>
+          <th class="small-6 large-6 columns decidim-bar" style="background-image: url('<%= image_path("decidim/header_email.png") %>')">
+            <table>
+              <tr>
+                <th>
+                  <center>
+                    <%= image_tag(decidim.root_url(host: organization.host) + image_url("decidim/header_email.png")[1..-1], alt: t("alt_banner_image", scope: "decidim.newsletter_templates.mel_template")) %>
+                  </center>
+                </th>
+              </tr>
+            </table>
+          </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table class="spacer">
+        <tbody>
+        <tr>
+          <td height="40px" style="font-size:40px;line-height:40px;"> </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="row content">
+        <tr>
+          <th class="small-12 first columns">
+            <%= body %>
+          </th>
+          <th class="expander"></th>
+        </tr>
+      </table>
+
+      <table class="row">
+        <tr>
+          <th class="small-12 first columns">
+          </th>
+          <th class="expander"></th>
+        </tr>
+      </table>
+
+      <table class="row">
+        <tr>
+          <th class="expander"></th>
+          <th class="cityhall-bar" style="padding: 50px; width: 30% !important;">
+            <div class="decidim-logo">
+              <%= image_tag organization.logo.medium.url, alt: t("logo", scope: "decidim.accessibility", organization: organization.name) %>
+            </div>
+          </th>
+          <th style="width: 100%; height: 175px; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; color: #FFFFFF; font-size: 12px">
+            <a style="color: #FFFFFF; margin: 2.5px 0;" target="_blank" href="https://participation.lillemetropole.fr/processes">🖐 Participez aux concertations</a>
+            <a style="color: #FFFFFF; margin: 2.5px 0;" target="_blank" href="http://www.conseildeveloppement-lillemetropole.fr/">🤝 Conseil de développement</a>
+            <a style="color: #FFFFFF; margin: 2.5px 0;" target="_blank" href="https://opendata.lillemetropole.fr/explore/?refine.theme=Participation+citoyenne&sort=modified">📊 Consultez les données de la participation citoyenne en Open Data</a>
+          </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

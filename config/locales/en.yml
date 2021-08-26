@@ -1,6 +1,14 @@
 ---
 en:
   decidim:
+    newsletter_templates:
+      mel_template_settings_form:
+        interpolations_hint: Interpolation
+        body: Content body
+      mel_template:
+        alt_banner_image: MEL - À vous la parole !
+        body_preview: Body preview
+        name: MEL template
     authorization_handlers:
       mel_authorization_handler:
         name: Identity Verification Form - MEL
