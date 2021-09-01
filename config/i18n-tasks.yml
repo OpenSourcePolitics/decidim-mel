@@ -249,6 +249,9 @@ ignore_unused:
   - layouts.decidim.assemblies.index.promoted_assemblies
   - layouts.decidim.assemblies.order_by_assemblies.*
   - layouts.decidim.assembly_header.assembly_menu_item
+  - decidim.newsletter_mailer.newsletter.*
+  - decidim.newsletter_templates.mel_template.*
+  - decidim.newsletter_templates.mel_template_settings_form.*
 
 
 

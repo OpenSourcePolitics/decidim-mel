@@ -1,31 +1,37 @@
 ---
 en:
   decidim:
-    newsletter_templates:
-      mel_template_settings_form:
-        interpolations_hint: Interpolation
-        body: Content body
-      mel_template:
-        alt_banner_image: MEL - À vous la parole !
-        body_preview: 'Dummy text for body: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
-        name: MEL template
-        menu_item_1:
-          link: https://decidim.org
-          icon: 🖐
-          text: Lectus pretium facilisis
-        menu_item_2:
-          link: https://decidim.org
-          icon: 🤝
-          text: Sed id urna at nisl
-        menu_item_3:
-          link: https://decidim.org
-          icon: 📊
-          text: Etiam facilisis sem nibh, sit amet rutrum
     authorization_handlers:
       mel_authorization_handler:
         name: Identity Verification Form - MEL
       mel_authorization_workflow:
         name: Authorization process
+    newsletter_mailer:
+      newsletter:
+        note: You received this email because you're subscribed to newsletters on %{organization_name}. You can change your settings on your <a href="%{link}">notifications page</a>.
+        see_on_website: Can’t see this email correctly? View it on the <a href="%{link}" target="_blank">website</a>.
+        unsubscribe: To opt out of receiving this type of email, <a href="%{link}" target="_blank" class="unsubscribe">Unsubscribe</a>.
+    newsletter_templates:
+      mel_template:
+        alt_banner_image: MEL - À vous la parole !
+        body_preview: 'Dummy text for body: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
+        menu_item_1:
+          icon: "\U0001F590"
+          link: https://decidim.org
+          text: Lectus pretium facilisis
+        menu_item_2:
+          icon: "\U0001F91D"
+          link: https://decidim.org
+          text: Sed id urna at nisl
+        menu_item_3:
+          icon: "\U0001F4CA"
+          link: https://decidim.org
+          text: Etiam facilisis sem nibh, sit amet rutrum
+        name: MEL template
+      mel_template_settings_form:
+        show:
+          body: Content body
+          interpolations_hint: Interpolation
     verifications:
       authorizations:
         first_login:
