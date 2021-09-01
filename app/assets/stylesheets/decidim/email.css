@@ -1748,7 +1748,7 @@ table.body {
 }
 
 .cityhall-bar {
-    padding: 30px;
+    padding: 30px 20px 30px 30px;
 }
 
 .cityhall-bar img {
@@ -1763,7 +1763,7 @@ table.body {
 
 .footnote,
 .headnote {
-    padding-top: 10px;
+    padding: 10px 16px !important;
     color: #666;
     font-size: 12px;
 }
@@ -1771,6 +1771,10 @@ table.body {
 
 table.container.main {
     background: #fefefe;
+}
+
+table.container table.content {
+    width: 97%;
 }
 
 .content-title {
@@ -1785,4 +1789,27 @@ table.container.main {
     padding: 1rem;
     margin-right: 0.5rem;
     border: 1px solid #e8e8e8;
+}
+
+.footer-bar {
+    background-color: #0a0a0a;
+}
+
+.footer-menu {
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.footer-menu-item {
+    margin: 8px 0;
+}
+
+.footer-menu-item-icon {
+    margin-right: 5px;
+}
+
+.footer-menu-item-text {
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-weight: bold;
 }

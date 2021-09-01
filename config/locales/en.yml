@@ -7,8 +7,20 @@ en:
         body: Content body
       mel_template:
         alt_banner_image: MEL - À vous la parole !
-        body_preview: Body preview
+        body_preview: 'Dummy text for body: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
         name: MEL template
+        menu_item_1:
+          link: https://decidim.org
+          icon: 🖐
+          text: Lectus pretium facilisis
+        menu_item_2:
+          link: https://decidim.org
+          icon: 🤝
+          text: Sed id urna at nisl
+        menu_item_3:
+          link: https://decidim.org
+          icon: 📊
+          text: Etiam facilisis sem nibh, sit amet rutrum
     authorization_handlers:
       mel_authorization_handler:
         name: Identity Verification Form - MEL

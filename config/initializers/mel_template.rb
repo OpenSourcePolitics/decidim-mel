@@ -16,7 +16,7 @@ Decidim.content_blocks.register(:newsletter_template, :mel_template) do |content
       :body,
       type: :text,
       translated: true,
-      preview: -> { ([I18n.t("decidim.newsletter_templates.mel_template.body_preview")] * 100).join(" ") }
+      preview: -> { I18n.t("decidim.newsletter_templates.mel_template.body_preview") }
     )
   end
 end
