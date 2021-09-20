@@ -1,3 +1,4 @@
+---
 fr:
   activemodel:
     attributes:
@@ -14,25 +15,23 @@ fr:
       close_meeting:
         closing_report: Compte rendu
       mel_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
-      participatory_process:
-        private_space: Espace privé
       osp_authorization_handler:
+        birthday: Date de naissance
         document_number: Numéro unique
         postal_code: Code postal
-        birthday: Date de naissance
       participatory_process:
-        participatory_process_group_id: Groupe de participations
         developer_group: Promoteur
         local_area: Périmètre
         meta_scope: Échelle
+        participatory_process_group_id: Groupe de participations
         participatory_scope: Objectif
         participatory_structure: Modalités
         private_space: Espace privé
-        target: Participants
         promoted: Mise en avant
+        target: Participants
       participatory_process_group:
         participatory_process_ids: Participations liées
       proposal:
@@ -169,21 +168,6 @@ fr:
         update:
           error: Une erreur s'est produite lors de la mise à jour de ce lien.
           success: Lien mis à jour avec succès
-      participatory_processes:
-        create:
-          error: Une erreur s'est produite lors de la création d'une nouvelle participation.
-          success: Participation créée avec succès. Configurez maintenant ses étapes.
-        destroy:
-          success: Participation supprimée avec succès.
-        index:
-          not_published: Non publiée
-          published: Publiée
-          title: Nouvelle participation
-        new:
-          title: nouvelle participation
-        update:
-          error: Une erreur s'est produite lors de la mise à jour de cette participation.
-          success: Participation mise à jour avec succès.
       participatory_process_copies:
         new:
           title: Dupliquer la participation
@@ -244,6 +228,21 @@ fr:
         update:
           error: Une erreur s'est produite lors de la mise à jour d'un utilisateur pour cette participation.
           success: L'utilisateur a été mis à jour avec succès pour cette participation.
+      participatory_processes:
+        create:
+          error: Une erreur s'est produite lors de la création d'une nouvelle participation.
+          success: Participation créée avec succès. Configurez maintenant ses étapes.
+        destroy:
+          success: Participation supprimée avec succès.
+        index:
+          not_published: Non publiée
+          published: Publiée
+          title: Nouvelle participation
+        new:
+          title: nouvelle participation
+        update:
+          error: Une erreur s'est produite lors de la mise à jour de cette participation.
+          success: Participation mise à jour avec succès.
       participatory_processes_copies:
         create:
           error: Une erreur s'est produite lors de la duplication de cette participation.
@@ -257,6 +256,12 @@ fr:
         navbar_links: Liens de navigation
         participatory_process_groups: Groupes de participations
         participatory_processes: Participations
+    amendments:
+      emendation:
+        announcement:
+          evaluating: |-
+            Cet amendement pour le %{amendable_type} %{proposal_link}
+            est en cours d’évaluation.
     application:
       documents:
         related_documents: Documents à consulter
@@ -280,10 +285,10 @@ fr:
         children: Agora
         developer_group: Promoteur
         local_area: Périmètre
+        meta_scope: Échelle
         participatory_scope: Objectif
         participatory_structure: Modalités
         private_space: Ceci est une agora privée
-        meta_scope: Échelle
         target: Participants
       statistics:
         assemblies_count: Agora
@@ -291,99 +296,47 @@ fr:
       mel_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - MEL
       mel_authorization_workflow:
         name: Procédure d'autorisation
       osp_authorization_handler:
         explanation: Vérifier votre identité en saisissant un numéro unique
         fields:
+          birthday: Date de naissance
           document_number: Numéro unique
           postal_code: Code postal
-          birthday: Date de naissance
         name: Formulaire de vérification d'identité - MEL
       osp_authorization_workflow:
         name: Procédure d'autorisation
-    devise:
-      registrations:
-        new:
-          newsletter: Recevoir les actualités à venir des participations par la newsletter <a href="mailto:participationcitoyenne@lillemetropole.fr">participationcitoyenne@lillemetropole.fr</a>
-          sign_up_as:
-            user: Citoyen
-          subtitle: Inscrivez-vous pour participer et débattre sur la plateforme.
-      sessions:
-        new:
-          are_you_new?: Nouveau sur la plateforme ?
-    features:
-      proposals:
-        actions:
-          vote: Soutenir
-        settings:
-          global:
-            vote_limit: Nombre maximum de soutiens par utilisateur
-          step:
-            votes_blocked: Soutiens bloqués
-            votes_enabled: Soutiens activés
-            votes_hidden: Cacher le compteur de soutiens
-    menu:
-      assemblies: Agora
-      processes: Participer
-    participatory_process_groups:
-      show:
-        group_participatory_processes: 'Participation pour %{group}'
-        title: Groupes de participations
-    participatory_process_steps:
-      index:
-        process_steps: Etapes de la participation
-        title: Etapes de la participation
-    participatory_processes:
-      admin:
-        participatory_process_copies:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-        participatory_processes:
-          form:
-            slug_help: 'Les identifiants d''URL sont utilisés pour générer les URL qui envoient vers cette participation. N''accepte que des lettres, des chiffres et des tirets et doit commencer par une lettre. Exemple: %{url}'
-      index:
-        title: Participation
-      order_by_processes:
-        active: Actives
-        all: Toutes
-        past: Passées
-      pages:
-        home:
-          highlighted_processes:
-            active_processes: Participations en cours
-            see_all_processes: Voir toutes les participations
-      show:
-        developer_group: Promoteur
-        local_area: Périmètre
-        participatory_scope: Objectif
-        participatory_structure: Modalités
-        meta_scope: Échelle
-        target: Participants
-    proposals:
-      answers:
-        not_answered: En attente de réponse
-      proposals:
-        filters:
-          voted: Soutenues
-        orders:
-          most_voted: Les plus soutenues
-          recent: Les plus récentes
-        vote_button:
-          already_voted: Soutenue
-          already_voted_hover: Ne plus soutenir
-          maximum_votes_reached: Nombre maximum de soutiens atteint
-          vote: Soutenir
-        votes_count:
-          count:
-            one: SOUTIEN
-            other: SOUTIENS
-    scopes:
-      global: Toute la métropole
+    newsletter_mailer:
+      newsletter:
+        note: Vous avez reçu cet email parce que vous êtes abonné aux newsletters de %{organization_name}.<br/> Vous pouvez modifier vos paramètres sur votre <a href="%{link}">page de notifications</a>.<br/>
+        see_on_website: Vous ne pouvez pas voir cet email correctement ? Consultez la <a href="%{link}" target="_blank">version web</a>.
+        unsubscribe: Pour ne plus recevoir ce type d'email, <a href="%{link}" target="_blank" class="unsubscribe">Désabonnez-vous</a>.
+    newsletter_templates:
+      mel_template:
+        alt_banner_image: MEL - À vous la parole !
+        body_preview: 'Faux texte pour le contenu: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
+        menu_item_1:
+          icon: "\U0001F590"
+          link: https://participation.lillemetropole.fr/processes
+          text: Participez aux concertations
+        menu_item_2:
+          icon: "\U0001F91D"
+          link: http://www.conseildeveloppement-lillemetropole.fr/
+          text: Conseil de développement
+        menu_item_3:
+          icon: "\U0001F4CA"
+          link: https://opendata.lillemetropole.fr/explore/?refine.theme=Participation+citoyenne&sort=modified
+          text: Consultez les données de participation en Open Data
+        name: MEL basique
+      mel_template_settings_form:
+        show:
+          body: Contenu principal
+          interpolations_hint: Interpolation
     verifications:
       authorizations:
         first_login:
@@ -407,6 +360,20 @@ fr:
     mailer:
       invite_private_user:
         subject: Vous avez été invité à une agora privée sur %{organization}
+  faker:
+    address:
+      country_code:
+      - FR
+      - FR0
+      - FR1
+      - FR2
+      - FR3
+      - FR4
+      - FR5
+      - FR6
+      - FR7
+      - FR8
+      - FR9
   layouts:
     decidim:
       assemblies:
@@ -414,24 +381,9 @@ fr:
           promoted_assemblies: Agora mise en avant
         order_by_assemblies:
           assemblies:
-            one: '%{count} agora'
-            other: '%{count} agora'
+            one: "%{count} agora"
+            other: "%{count} agora"
       assembly_header:
         assembly_menu_item: Présentation
       footer:
         download_open_data: Données ouvertes
-      participatory_processes:
-        index:
-          promoted_processes: Participations mises en avant
-        order_by_processes:
-          processes:
-            one: '%{count} participation'
-            other: '%{count} participations'
-      process_header:
-        process_menu_item: La participation
-  pages:
-    home:
-      extended:
-        how_to_participate: Comment participer ?
-      statistics:
-        assemblies_count: Agora
