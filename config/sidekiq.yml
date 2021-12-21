@@ -1,6 +1,7 @@
 :concurrency: 5
 :queues:
 - default
+- backups
 - metrics
 - mailers
 - newsletter
@@ -20,3 +21,7 @@
     cron: '0 0 18 * * *' # Run at 18:00
     class: OrdersReminderJob
     queue: scheduled
+  Backup:
+    cron: '0 0 4 * * *' # Run at 04:00
+    class: BackupJob
+    queue: backups
