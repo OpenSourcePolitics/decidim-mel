@@ -1,30 +1,44 @@
 version: '3'
 services:
-  app:
-    build: .
-    image: osp-app:0.18-dev
+  database:
+    image: postgres
     volumes:
-    - .:/app
-    - bundle:/usr/local/bundle
-    - node_modules:/app/node_modules
+      - pg-data:/var/lib/postgresql/data
     environment:
-    - PORT=3000
-    - DATABASE_HOST=pg
-    - DATABASE_USERNAME=postgres
-    - RAILS_ENV=production
-    - SECRET_KEY_BASE=f97271c0788641d98a8a7feaa2b8b40fdc28f83285a4f23703abdaf3ac0641a4f047788fd15e4b698e026325ebda371573c370fd6a3bdb720d7e04a580b84882
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/var/lib/redis/data
+  sidekiq:
+    image: decidim-app:latest
+    command: ["sidekiq", "-C", "config/sidekiq.yml"]
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - app
+    links:
+      - database
+      - redis 
+
+  app:
+    image: decidim-app:latest
+    volumes:
+      - node_modules:/app/node_modules
+    environment:
+      - RAILS_ENV=development
+      - DATABASE_HOST=database
+      - DATABASE_USERNAME=postgres
+      - DECIDIM_HOST=0.0.0.0
+      - REDIS_URL=redis://redis:6379
     ports:
     - 3000:3000
     links:
-      - pg
-    command: ["puma"]
-    entrypoint: /app/docker-entrypoint.sh
-  pg:
-    image: postgres:11
-    volumes:
-      - pg-data:/var/lib/postgresql/data
-
+      - database
+      - redis
 volumes:
   node_modules: {}
-  bundle: {}
   pg-data: {}
+  redis-data: {}
