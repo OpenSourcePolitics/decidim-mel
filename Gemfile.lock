@@ -923,6 +923,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activejob-uniqueness
   bootsnap (~> 1.4)
   byebug (~> 11.0)
   dalli
@@ -950,6 +951,7 @@ DEPENDENCIES
   spring (~> 2.0)
   spring-watcher-listen (~> 2.0)
   sprockets (~> 3.7)
+  sys-filesystem
   uglifier (~> 4.1)
   web-console (~> 3.5)
 
