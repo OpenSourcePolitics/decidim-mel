@@ -96,6 +96,8 @@ Decidim.configure do |config|
   config.base_uploads_path = "#{ENV["HEROKU_APP_NAME"]}/" if ENV["HEROKU_APP_NAME"].present?
 end
 
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
 Geocoder.configure(timeout: 10)
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
