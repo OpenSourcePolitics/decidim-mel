@@ -16,9 +16,8 @@ describe "Account", type: :system do
     it "shows the account form when clicking on the menu" do
       visit decidim.root_path
 
-      within ".topbar__user__logged" do
-        find("a", text: user.name).hover
-        find("a", text: "My account").click
+      within_user_menu do
+        find("a", text: "account").click
       end
 
       expect(page).to have_css("form.edit_user")
@@ -49,9 +48,8 @@ describe "Account", type: :system do
 
         user.reload
 
-        within ".topbar__user__logged" do
-          find("a", text: user.name).hover
-          find("a", text: "My public profile").click
+        within_user_menu do
+          find("a", text: "public profile").click
         end
 
         expect(page).to have_content("example.org")

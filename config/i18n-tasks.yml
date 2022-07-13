@@ -180,6 +180,11 @@ ignore_missing:
  - layouts.decidim.assemblies.order_by_assemblies.*
  - decidim.admin.participatory_space_private_users.create.success
  - decidim.admin.participatory_space_private_users.create.error
+ - decidim.meetings.meetings.create.*
+ - decidim.meetings.meetings.update.*
+ - decidim.meetings.meeting.not_allowed
+ - decidim.accessibility.skip_button
+ - decidim.meetings.directory.meetings.index.all
 
 # Consider these keys used:
 ignore_unused:
@@ -194,3 +199,12 @@ ignore_unused:
   - decidim.verifications.authorizations.first_login.actions.osp_authorization_handler
   - decidim.verifications.authorizations.first_login.actions.osp_authorization_workflow
   - layouts.decidim.user_menu.account
+  - decidim.authorization_handlers.mel_authorization_handler.name
+  - decidim.authorization_handlers.mel_authorization_workflow.name
+  - decidim.newsletter_mailer.newsletter.note
+  - decidim.newsletter_mailer.newsletter.see_on_website
+  - decidim.newsletter_mailer.newsletter.unsubscribe
+  - decidim.newsletter_templates.mel_template.body_preview
+  - decidim.newsletter_templates.mel_template.name
+  - decidim.verifications.authorizations.first_login.actions.mel_authorization_handler
+
