@@ -207,4 +207,15 @@ ignore_unused:
   - decidim.newsletter_templates.mel_template.body_preview
   - decidim.newsletter_templates.mel_template.name
   - decidim.verifications.authorizations.first_login.actions.mel_authorization_handler
-
+  - layouts.decidim.user_menu.*
+  - layouts.decidim.footer.*
+  - layouts.decidim.header.*
+  - decidim.system.organizations.omniauth_settings.publik.*
+  - layouts.decidim.user_menu.account
+  - decidim.events.users.*
+  - decidim.events.verifications.*
+  - activemodel.attributes.*
+  - activerecord.*
+  - decidim.*
+  - devise.*
+  - layouts.*
