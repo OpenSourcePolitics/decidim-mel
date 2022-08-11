@@ -8,8 +8,7 @@ default: &default
   public_root_path: public
   webpack_compile_output: true
   cache_path: tmp/webpacker-cache
-  extract_css: true
-
+  extract_css: trueodules
   additional_paths:
     - node_modules
     - app/packs
