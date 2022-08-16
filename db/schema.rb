@@ -555,6 +555,15 @@ ActiveRecord::Schema.define(version: 2022_07_12_140157) do
     t.index ["endorsements_count"], name: "idx_decidim_debates_debates_on_endorsemnts_count"
   end
 
+  create_table "decidim_editor_images", force: :cascade do |t|
+    t.bigint "decidim_author_id", null: false
+    t.bigint "decidim_organization_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_author_id"], name: "decidim_editor_images_author"
+    t.index ["decidim_organization_id"], name: "decidim_editor_images_constraint_organization"
+  end
+
   create_table "decidim_endorsements", force: :cascade do |t|
     t.string "resource_type"
     t.bigint "resource_id"

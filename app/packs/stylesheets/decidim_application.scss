@@ -6,7 +6,8 @@
 //
 // By default this is empty.
 
-@import "email/email-custom";
-@import "email";
-@import "modules/footer";
-@import "vizzs/areachart";
+@import "application";
+@import "decidim/email/email-custom";
+@import "decidim/email/email";
+@import "decidim/modules/footer";
+@import "decidim/vizzs/areachart";
