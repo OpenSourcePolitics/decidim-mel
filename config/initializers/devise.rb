@@ -26,3 +26,7 @@ Devise.setup do |config|
   # the user cannot access the website without confirming their account.
   config.allow_unconfirmed_access_for = ENV.fetch("DECIDIM_UNCONFIRMED_ACCESS", 0).to_i.days
 end
+
+Devise.setup do |config|
+  config.confirm_within = 12.hours
+end

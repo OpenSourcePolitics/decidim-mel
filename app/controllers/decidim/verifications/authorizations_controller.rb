@@ -72,7 +72,7 @@ module Decidim
         return true if handler
 
         logger.warn "Invalid authorization handler given: #{handler_name} doesn't"\
-          "exist or you haven't added it to `Decidim.authorization_handlers`"
+                    "exist or you haven't added it to `Decidim.authorization_handlers`"
 
         redirect_to(authorizations_path) && (return false)
       end

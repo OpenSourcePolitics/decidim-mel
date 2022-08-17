@@ -1,8 +1,5 @@
 # Overrides
 
-## Fix proposals cells caching
-- **app/cells/decidim/proposals/proposal_m_cell.rb:128**
-
 ## Load decidim-awesome assets only if dependencie is present
 * `app/views/layouts/decidim/_head.html.erb:33`
 
@@ -15,15 +12,9 @@
 ## Fix meetings orders in indexes
 * `app/controllers/decidim/meetings/meetings_controller.rb`
 * `app/controllers/decidim/meetings/directory/meetings_controller.rb`
-##  Fix meetings registration serializer
-* `app/serializers/decidim/meetings/registration_serializer.rb`
-## Fix UserAnswersSerializer for CSV exports
-* `lib/decidim/forms/user_answers_serializer.rb`
 ## 28c8d74 - Add basic tests to reference package (#1), 2021-07-26
 * `lib/extends/commands/decidim/admin/create_participatory_space_private_user_extends.rb`
 * `lib/extends/commands/decidim/admin/impersonate_user_extends.rb`
-##  cd5c2cc - Backport fix/user answers serializer (#11), 2021-09-30
-* `lib/decidim/forms/user_answers_serializer.rb`
 ## Fix metrics issue in admin dashboard
  - **app/stylesheets/decidim/vizzs/_areachart.scss**
 ```scss
@@ -40,9 +31,6 @@
 <% if provider.match?("france") %>
 ```
 
-* `app/views/decidim/scopes/picker.html.erb`
-c76437f - Modify cancel button behaviour to match close button, 2022-02-08
-
 * `app/helpers/decidim/backup_helper.rb`
 83830be - Add retention service for daily backups (#19), 2021-11-09
 
@@ -54,10 +42,6 @@ de6d804 - fix multipart object tagging (#40) (#41), 2021-12-24
 
 * `lib/tasks/restore_dump.rake`
 705e0ad - Run rubocop, 2021-12-01
-## Disable proposals cells caching
-- **app/cells/decidim/proposals/proposal_m_cell.rb:128**
-* `app/queries/decidim/participatory_processes/organization_promoted_participatory_process_groups.rb`
-f12c07d - Bump Develop on 0.25 (#104), 2022-05-10
 
 * `app/models/decidim/proposals/proposal.rb`
 f4536ea - Fix proposals permissions 0.24 (#64), 2022-03-11
@@ -187,4 +171,3 @@ d71197d - Add nil safety in migrate task, 2022-04-20
 
 * `lib/decidim/test/promoted_participatory_processes_shared_examples.rb`
 f12c07d - Bump Develop on 0.25 (#104), 2022-05-10
-

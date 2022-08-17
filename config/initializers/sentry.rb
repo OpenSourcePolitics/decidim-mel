@@ -12,6 +12,6 @@ if Rails.application.secrets.dig(:sentry, :enabled)
     config.traces_sample_rate = ENV.fetch("SENTRY_SAMPLE_RATE", 1.0)
   end
 
-  Sentry.set_tags('server.hostname': `hostname`.chomp)
-  Sentry.set_tags('server.ip': `hostname -I | awk '{print $1}'`.chomp)
+  Sentry.set_tags("server.hostname": `hostname`.chomp)
+  Sentry.set_tags("server.ip": `hostname -I | awk '{print $1}'`.chomp)
 end
