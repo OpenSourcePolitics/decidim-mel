@@ -18,13 +18,13 @@ describe "Homepage", type: :system do
     let(:official_url) { "http://mytesturl.me" }
     let(:organization) do
       create(:organization, official_url: official_url,
-             highlighted_content_banner_enabled: true,
-             highlighted_content_banner_title: Decidim::Faker::Localized.sentence(word_count: 2),
-             highlighted_content_banner_short_description: Decidim::Faker::Localized.sentence(word_count: 2),
-             highlighted_content_banner_action_title: Decidim::Faker::Localized.sentence(word_count: 2),
-             highlighted_content_banner_action_subtitle: Decidim::Faker::Localized.sentence(word_count: 2),
-             highlighted_content_banner_action_url: ::Faker::Internet.url,
-             highlighted_content_banner_image: Decidim::Dev.test_file("city.jpeg", "image/jpeg"))
+                            highlighted_content_banner_enabled: true,
+                            highlighted_content_banner_title: Decidim::Faker::Localized.sentence(word_count: 2),
+                            highlighted_content_banner_short_description: Decidim::Faker::Localized.sentence(word_count: 2),
+                            highlighted_content_banner_action_title: Decidim::Faker::Localized.sentence(word_count: 2),
+                            highlighted_content_banner_action_subtitle: Decidim::Faker::Localized.sentence(word_count: 2),
+                            highlighted_content_banner_action_url: ::Faker::Internet.url,
+                            highlighted_content_banner_image: Decidim::Dev.test_file("city.jpeg", "image/jpeg"))
     end
 
     before do
@@ -227,13 +227,13 @@ describe "Homepage", type: :system do
               expect(page).to have_no_content(static_page_topic3.title["en"])
 
               expect(page).to have_link(
-                                static_page_topic1.title["en"],
-                                href: "/pages/#{static_page_topic1_page1.slug}"
-                              )
+                static_page_topic1.title["en"],
+                href: "/pages/#{static_page_topic1_page1.slug}"
+              )
               expect(page).to have_link(
-                                static_page_topic2.title["en"],
-                                href: "/pages/#{static_page_topic2_page1.slug}"
-                              )
+                static_page_topic2.title["en"],
+                href: "/pages/#{static_page_topic2_page1.slug}"
+              )
             end
           end
         end
