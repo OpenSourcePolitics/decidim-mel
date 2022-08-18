@@ -51,20 +51,25 @@ en:
           email_outro: Check the <a href="%{conflicts_path}">Verifications's conflicts list</a> and contact the participant to verify their details and solve the issue.
           email_subject: Failed verification attempt against a managed participant
           notification_title: The participant <a href="%{resource_path}">%{resource_title}</a> has tried to verify themself with the data of the managed participant <a href="%{managed_user_path}">%{managed_user_name}</a>.
-    meetings:
-      directory:
-        meetings:
-          index:
-            all: All
-      meeting:
-        not_allowed: You are not allowed to view this meeting
-      meetings:
-        create:
-          invalid: There was a problem creating this meeting.
-          success: You have created the meeting successfully.
-        update:
-          invalid: There was a problem updating the meeting.
-          success: You have updated the meeting successfully.
+    newsletter_templates:
+      mel_template:
+        alt_banner_image: Alt banner image
+        mel_template_settings_form:
+          show:
+            body: Body
+            interpolations_hint: Interpolations hint
+        menu_item_1:
+          icon: Icon
+          link: Link
+          text: Text
+        menu_item_2:
+          icon: Icon
+          link: Link
+          text: Text
+        menu_item_3:
+          icon: Icon
+          link: Link
+          text: Text
     proposals:
       create:
         error: There was a problem saving
@@ -87,13 +92,6 @@ en:
       withdraw:
         errors:
           has_supports: This proposal can not be withdrawn because it already has supports.
-    scopes:
-      global: Global
-      picker:
-        cancel: Cancel
-        change: Change
-        choose: Choose
-        currently_selected: Currently selected
     system:
       organizations:
         omniauth_settings:
@@ -120,9 +118,6 @@ en:
             site_url: Site URL
     verifications:
       authorizations:
-        create:
-          error: Error
-          success: Success
         first_login:
           actions:
             osp_authorization_handler: Verify with the identity verification form
