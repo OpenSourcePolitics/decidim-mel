@@ -14,7 +14,7 @@ gem "decidim-phone_authorization_handler", git: "https://github.com/OpenSourcePo
 # gem "decidim-question_captcha", git: "https://github.com/OpenSourcePolitics/decidim-module-question_captcha.git", branch: DECIDIM_VERSION
 gem "decidim-decidim_awesome", "0.8.3"
 gem "decidim-friendly_signup"
-gem "decidim-sitemaps", git: "https://git.fpfis.eu/armandfardeau/digit-cofe-sitemap"
+gem "decidim-sitemaps", git: "https://git.fpfis.eu/armandfardeau/digit-cofe-sitemap", branch: "release/0.26"
 gem "decidim-spam_detection", git: "https://github.com/OpenSourcePolitics/decidim-spam_detection.git"
 gem "decidim-templates"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer.git"
