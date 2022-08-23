@@ -18,8 +18,11 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 gem "omniauth-france_connect", git: "https://github.com/OpenSourcePolitics/omniauth-france_connect"
 gem "omniauth-publik", git: "https://github.com/OpenSourcePolitics/omniauth-publik", branch: "v0.0.9"
 
+
 gem "decidim-decidim_awesome", "0.8.3"
 gem "decidim-friendly_signup"
+
+gem 'decidim-sitemaps', git: "https://git.fpfis.eu/armandfardeau/digit-cofe-sitemap"
 
 gem "dotenv-rails"
 

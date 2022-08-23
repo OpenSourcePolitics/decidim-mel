@@ -1,4 +1,12 @@
 GIT
+  remote: https://git.fpfis.eu/armandfardeau/digit-cofe-sitemap
+  revision: bf645fe16cc884558fe8a0a2974646bb766563cb
+  specs:
+    decidim-sitemaps (0.1.0)
+      decidim-core
+      sitemap_generator
+
+GIT
   remote: https://github.com/OpenSourcePolitics/decidim-module_phone_authorization_handler
   revision: 488cc8827845ec1c5266aa499df2ebf9b20e02a3
   branch: release/0.26-stable
@@ -572,6 +580,8 @@ GEM
       timeout
     newrelic_rpm (8.9.0)
     nio4r (2.5.8)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
@@ -818,6 +828,8 @@ GEM
     simplecov-cobertura (1.3.1)
       simplecov (~> 0.8)
     simplecov-html (0.12.3)
+    sitemap_generator (6.3.0)
+      builder (~> 3.0)
     smart_properties (1.17.0)
     social-share-button (1.2.4)
       coffee-rails
@@ -907,6 +919,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-20
   x86_64-linux
 
@@ -921,6 +934,7 @@ DEPENDENCIES
   decidim-dev!
   decidim-friendly_signup
   decidim-phone_authorization_handler!
+  decidim-sitemaps!
   decidim-spam_detection!
   decidim-templates
   decidim-term_customizer!
@@ -949,7 +963,7 @@ DEPENDENCIES
   web-console (= 4.0.4)
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 3.0.2p107
 
 BUNDLED WITH
-   2.3.19
+   2.3.14
