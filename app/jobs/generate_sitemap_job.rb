@@ -2,7 +2,7 @@
 
 require "rake"
 
-class GenerateSitemap < ApplicationJob
+class GenerateSitemapJob < ApplicationJob
   unique :while_executing, on_conflict: :log
 
   def perform
