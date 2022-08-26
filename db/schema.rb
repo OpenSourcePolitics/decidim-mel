@@ -830,6 +830,7 @@ ActiveRecord::Schema.define(version: 2022_08_18_155742) do
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id"
+    t.index ["state"], name: "index_decidim_meetings_meetings_on_state"
   end
 
   create_table "decidim_meetings_polls", force: :cascade do |t|
