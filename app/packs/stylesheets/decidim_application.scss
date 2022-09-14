@@ -11,3 +11,24 @@
 @import "decidim/email/email";
 @import "decidim/modules/footer";
 @import "decidim/vizzs/areachart";
+
+.social-register {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.primary.external-link-container {
+  color: var(--secondary)
+}
+
+a.button--france_connect {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+  max-width: 230px;
+}
+a.button--france_connect:hover {
+  background-color: transparent;
+  filter: brightness(120%);
+}

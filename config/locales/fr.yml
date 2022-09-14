@@ -9,6 +9,11 @@ fr:
       participatory_process:
         private_space: Espace privé
   decidim:
+    omniauth:
+      france_connect:
+        external:
+          link: https://franceconnect.gouv.fr/
+          text: Qu'est-ce-que FranceConnect ?
     accessibility:
       skip_button: Passer au contenu principal
     admin:
@@ -99,6 +104,8 @@ fr:
             client_id: Client ID
             client_secret: Client secret
             scope: Périmètre de données
+            provider: FranceConnect
+            provider_name: FranceConnect
             site_url: Site URL
           france_connect_profile:
             button_path: Chemin du bouton
