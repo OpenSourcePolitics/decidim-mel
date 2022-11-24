@@ -14,7 +14,11 @@ module Decidim
 
       CreateEditorImage.call(@form) do
         on(:ok) do |image|
-          render json: { url: image.attached_uploader(:file).path, message: I18n.t("success", scope: "decidim.editor_images.create") }
+          # Customization : Add base url in image source
+          url = image.attached_uploader(:file).path
+          url = "#{request.base_url}#{url}" unless url&.start_with?("http")
+          render json: { url: url, message: I18n.t("success", scope: "decidim.editor_images.create") }
+          # EOC
         end
 
         on(:invalid) do |_message|
