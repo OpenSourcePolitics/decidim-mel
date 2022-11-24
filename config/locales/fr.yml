@@ -57,7 +57,11 @@ fr:
           email_subject: Un utilisateur a tenté de se faire vérifier avec les données d'un utilisateur représenté
           notification_title: Le participant <a href="%{resource_path}">%{resource_title}</a> a tenté de se faire vérifier avec les données de l'utilisateur représenté <a href="%{managed_user_path}">%{managed_user_name}</a>.
     newsletter_templates:
+      mel_template_settings_form:
+        interpolations_hint: 'Astuce : Vous pouvez utiliser "%{name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
+        body: Contenu de la newsletter
       mel_template:
+        name: Template
         alt_banner_image: Alt banner image
         mel_template_settings_form:
           show:
