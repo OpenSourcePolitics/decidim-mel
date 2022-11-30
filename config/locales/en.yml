@@ -57,7 +57,11 @@ en:
           email_subject: Failed verification attempt against a managed participant
           notification_title: The participant <a href="%{resource_path}">%{resource_title}</a> has tried to verify themself with the data of the managed participant <a href="%{managed_user_path}">%{managed_user_name}</a>.
     newsletter_templates:
+      mel_template_settings_form:
+        interpolations_hint: Interpolations hint
+        body: Body
       mel_template:
+        name: Template
         alt_banner_image: Alt banner image
         mel_template_settings_form:
           show:
