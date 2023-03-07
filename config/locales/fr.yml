@@ -9,11 +9,6 @@ fr:
       participatory_process:
         private_space: Espace privé
   decidim:
-    omniauth:
-      france_connect:
-        external:
-          link: https://franceconnect.gouv.fr/
-          text: Qu'est-ce-que FranceConnect ?
     accessibility:
       skip_button: Passer au contenu principal
     admin:
@@ -37,6 +32,10 @@ fr:
         name: Formulaire de vérification d'identité
       osp_authorization_workflow:
         name: Procédure d'autorisation
+    devise:
+      sessions:
+        new:
+          sign_in_disabled: Vous pouvez accéder avec un compte externe
     events:
       budgets:
         pending_order:
@@ -77,6 +76,13 @@ fr:
         show:
           body: Contenu principal
           interpolations_hint: Interpolation
+    omniauth:
+      france_connect:
+        external:
+          link: https://franceconnect.gouv.fr/
+          text: Qu'est-ce-que FranceConnect ?
+        forgot_password:
+          ok_text: Warning, this password is the one of your local account and in no case the one of the account you use through FranceConnect. It will only be used when you log in with your email address rather than via FranceConnect.
     proposals:
       create:
         error: Il y a eu des erreurs lors de la sauvegarde de la proposition.
@@ -99,15 +105,20 @@ fr:
       withdraw:
         errors:
           has_supports: Cette proposition ne peut pas être retirée car elle dispose déjà de supports.
+    shared:
+      login_modal:
+        close_modal: Close modal
+        please_sign_in: Please sign in
+        sign_up: Sign up
     system:
       organizations:
         omniauth_settings:
           france_connect:
             client_id: Client ID
             client_secret: Client secret
-            scope: Périmètre de données
             provider: FranceConnect
             provider_name: FranceConnect
+            scope: Périmètre de données
             site_url: Site URL
           france_connect_profile:
             button_path: Chemin du bouton
@@ -131,6 +142,17 @@ fr:
           actions:
             osp_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
             osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
+  devise:
+    passwords:
+      new:
+        forgot_your_password: Mot de passe oublié ?
+        send_me_reset_password_instructions: Envoyez-moi les instructions de réinitialisation du mot de passe
+    sessions:
+      new:
+        sign_in: S'identifier
+    shared:
+      links:
+        forgot_your_password: Mot de passe oublié ?
   faker:
     address:
       country_code:
