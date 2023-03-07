@@ -1,5 +1,9 @@
 # Overrides
 
+## Update France Connect with requirements
+* `app/views/decidim/devise/passwords/new.html.erb`
+* `app/views/decidim/shared/_login_modal.html.erb`
+
 ## Load decidim-awesome assets only if dependencie is present
 * `app/views/layouts/decidim/_head.html.erb:33`
 
