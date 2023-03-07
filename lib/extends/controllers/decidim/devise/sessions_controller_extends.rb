@@ -11,6 +11,7 @@ module SessionControllerExtends
       super
     end
   end
+
   def after_sign_in_path_for(user)
     return super if user.is_a? Decidim::System::Admin
 
@@ -29,6 +30,7 @@ module SessionControllerExtends
   def skip_authorization_handler?
     ENV["SKIP_FIRST_LOGIN_AUTHORIZATION"] ? ActiveRecord::Type::Boolean.new.cast(ENV["SKIP_FIRST_LOGIN_AUTHORIZATION"]) : true
   end
+
   def destroy_france_connect_session(fc_logout_path)
     signed_out = (::Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
     if signed_out
