@@ -2,3 +2,4 @@
 
 require "extends/controllers/decidim/devise/sessions_controller_extends"
 require "extends/queries/decidim/participatory_processes/group_participatory_processes_extends"
+require "extends/controllers/decidim/devise/account_controller_extends"
