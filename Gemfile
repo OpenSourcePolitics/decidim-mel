@@ -19,7 +19,7 @@ gem "omniauth-france_connect", git: "https://github.com/OpenSourcePolitics/omnia
 gem "omniauth-publik", git: "https://github.com/OpenSourcePolitics/omniauth-publik"
 
 gem "decidim-decidim_awesome", "0.8.3"
-gem "decidim-friendly_signup"
+gem "decidim-friendly_signup", "0.4.4"
 
 gem "dotenv-rails"
 
