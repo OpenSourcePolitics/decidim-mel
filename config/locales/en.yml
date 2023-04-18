@@ -11,6 +11,10 @@ en:
   decidim:
     accessibility:
       skip_button: Skip button
+    account:
+      destroy:
+        error: Error
+        success: Success
     admin:
       participatory_space_private_users:
         create:
@@ -32,6 +36,9 @@ en:
         name: Identity Verification Form
       osp_authorization_workflow:
         name: Authorization procedure
+    core:
+      actions:
+        unauthorized: Unauthorized
     devise:
       sessions:
         new:
@@ -58,6 +65,7 @@ en:
     newsletter_templates:
       mel_template:
         alt_banner_image: Alt banner image
+        body_preview: 'Faux texte pour le contenu: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
         mel_template_settings_form:
           show:
             body: Body
@@ -78,8 +86,12 @@ en:
       mel_template_settings_form:
         body: Body
         interpolations_hint: Interpolations hint
+        show:
+          body: Contenu principal
+          interpolations_hint: Interpolation
     omniauth:
       france_connect:
+        explanation: FranceConnect est la solution proposée par l’État pour sécuriser et simplifier la connexion à vos services en ligne.
         external:
           link: https://franceconnect.gouv.fr/
           text: What is FranceConnect ?
