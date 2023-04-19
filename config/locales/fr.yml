@@ -11,6 +11,10 @@ fr:
   decidim:
     accessibility:
       skip_button: Passer au contenu principal
+    account:
+      destroy:
+        error: Votre compte a été supprimé avec succès.
+        success: Il y a eu un problème lors de la suppression de votre compte.
     admin:
       participatory_space_private_users:
         create:
@@ -32,6 +36,9 @@ fr:
         name: Formulaire de vérification d'identité
       osp_authorization_workflow:
         name: Procédure d'autorisation
+    core:
+      actions:
+        unauthorized: Vous n'êtes pas autorisé à effectuer cette action.
     devise:
       sessions:
         new:
@@ -59,6 +66,10 @@ fr:
       mel_template:
         alt_banner_image: MEL - À vous la parole !
         body_preview: 'Faux texte pour le contenu: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
+        mel_template_settings_form:
+          show:
+            body: Corps du texte
+            interpolations_hint: 'Astuce : Vous pouvez utiliser "% {name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
         menu_item_1:
           icon: "\U0001F590"
           link: https://participation.lillemetropole.fr/processes
@@ -73,11 +84,14 @@ fr:
           text: Consultez les données de participation en Open Data
         name: MEL basique
       mel_template_settings_form:
+        body: Corps du texte
+        interpolations_hint: 'Astuce : Vous pouvez utiliser "% {name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
         show:
           body: Contenu principal
           interpolations_hint: Interpolation
     omniauth:
       france_connect:
+        explanation: FranceConnect est la solution proposée par l’État pour sécuriser et simplifier la connexion à vos services en ligne.
         external:
           link: https://franceconnect.gouv.fr/
           text: Qu'est-ce-que FranceConnect ?

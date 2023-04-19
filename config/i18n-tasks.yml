@@ -115,3 +115,4 @@ ignore_unused:
   - decidim.events.users.*
   - decidim.events.verifications.*
   - decidim.system.organizations.omniauth_settings.*
+  - decidim.newsletter_templates.*
