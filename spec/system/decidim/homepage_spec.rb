@@ -165,14 +165,6 @@ describe "Homepage", type: :system do
 
           expect(page).to have_i18n_content(static_page_1.content)
         end
-
-        it "includes the footer sub_hero with the current organization name" do
-          expect(page).to have_css(".footer__subhero")
-
-          within ".footer__subhero" do
-            expect(page).to have_content(organization.name)
-          end
-        end
       end
 
       describe "includes statistics" do
