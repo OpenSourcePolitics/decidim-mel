@@ -55,9 +55,6 @@ group :production do
   gem "lograge"
   gem "passenger"
   gem "sendgrid-ruby"
-  gem "sentry-rails"
-  gem "sentry-ruby"
-  gem "sentry-sidekiq"
   gem "sidekiq"
   gem "sidekiq-scheduler"
 end
