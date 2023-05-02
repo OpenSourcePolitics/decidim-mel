@@ -62,7 +62,6 @@ group :production do
   # gem "rubocop-rails"
   gem "dalli"
   gem "lograge"
-  gem "newrelic_rpm"
   gem "passenger"
   gem "sendgrid-ruby"
   gem "sentry-rails"
