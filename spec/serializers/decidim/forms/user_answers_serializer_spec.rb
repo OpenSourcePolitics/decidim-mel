@@ -4,6 +4,7 @@ require "spec_helper"
 
 module Decidim
   module Forms
+    # rubocop:disable RSpec/MultipleMemoizedHelpers
     describe UserAnswersSerializer do
       subject do
         described_class.new(questionnaire.answers)
@@ -148,5 +149,6 @@ module Decidim
         end
       end
     end
+    # rubocop:enable RSpec/MultipleMemoizedHelpers
   end
 end

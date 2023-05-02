@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-task :restore_dump do
+task restore_dump: :environment do
   $stdout.puts "Path to dump file (/path/to/dump): "
   local_path = $stdin.gets.to_s.strip
   dump = local_path[-1].split("/")[-1]
