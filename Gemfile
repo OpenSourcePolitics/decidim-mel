@@ -53,7 +53,6 @@ end
 group :production do
   gem "dalli"
   gem "lograge"
-  gem "newrelic_rpm"
   gem "passenger"
   gem "sendgrid-ruby"
   gem "sentry-rails"
