@@ -45,7 +45,7 @@ gem "sys-filesystem"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-
+  gem "climate_control", "~> 1.2"
   gem "decidim-dev", git: "https://github.com/decidim/decidim.git", branch: DECIDIM_VERSION
   gem "rubocop-faker"
   # gem "decidim-dev", path: "../decidim"
@@ -61,6 +61,7 @@ end
 group :production do
   # gem "rubocop-rails"
   gem "dalli"
+  gem "health_check", "~> 3.1"
   gem "lograge"
   gem "newrelic_rpm"
   gem "passenger"
@@ -69,5 +70,6 @@ group :production do
   gem "sentry-ruby"
   gem "sentry-sidekiq"
   gem "sidekiq"
+  gem "sidekiq_alive", "~> 2.2"
   gem "sidekiq-scheduler"
 end
