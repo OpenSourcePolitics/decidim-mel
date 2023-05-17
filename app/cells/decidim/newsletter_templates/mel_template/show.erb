@@ -5,7 +5,7 @@
         <tr>
           <th class="decidim-bar" >
             <center>
-              <%= image_pack_tag("media/images/header_email.png", alt: t("alt_banner_image", scope: "decidim.newsletter_templates.mel_template")) %>
+              <img src="<%= "#{Rails.application.config.action_mailer.asset_host}#{asset_pack_path('media/images/header_email.png')}" %>" alt="<%= t('alt_banner_image', scope: 'decidim.newsletter_templates.mel_template') %>">
             </center>
           </th>
         </tr>
@@ -46,7 +46,7 @@
         <tr>
           <th class="expander"></th>
           <th class="cityhall-bar show-for-large">
-            <%= image_pack_tag("media/images/footer_email_group.png", alt: t("alt_banner_image", scope: "decidim.newsletter_templates.mel_template")) %>
+            <img src="<%= "#{Rails.application.config.action_mailer.asset_host}#{asset_pack_path('media/images/footer_email_group.png')}" %>" alt="<%= t('alt_banner_image', scope: 'decidim.newsletter_templates.mel_template') %>">
           </th>
           <th class="footer-menu">
             <div class="footer-menu-item">
