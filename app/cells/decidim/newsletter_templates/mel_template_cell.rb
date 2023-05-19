@@ -22,15 +22,15 @@ module Decidim
       end
 
       def organization_asset_url(asset)
-        "#{organization_host}#{image_pack_url(asset)}"
+        "#{organization_host}#{asset_pack_url(asset)}"
       end
 
       private
 
       def organization_host
-        return "https://#{current_organization.host}/" unless Rails.env.development?
+        port = Rails.env.development? ? 3000 : nil
 
-        "http://#{current_organization.host}:3000"
+        "#{decidim.root_url(host: current_organization.host, port: port)}".gsub(/\/$/, "")
       end
     end
   end
