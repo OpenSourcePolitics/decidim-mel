@@ -30,7 +30,7 @@ module Decidim
       def organization_host
         port = Rails.env.development? ? 3000 : nil
 
-        "#{decidim.root_url(host: current_organization.host, port: port)}".gsub(/\/$/, "")
+        decidim.root_url(host: current_organization.host, port: port).to_s.gsub(%r{/$}, "")
       end
     end
   end
