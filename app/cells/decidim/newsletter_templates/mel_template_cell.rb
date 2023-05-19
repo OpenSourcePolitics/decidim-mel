@@ -20,6 +20,18 @@ module Decidim
       def email_footer_css
         "decidim/email"
       end
+
+      def organization_asset_url(asset)
+        "#{organization_host}#{image_pack_url(asset)}"
+      end
+
+      private
+
+      def organization_host
+        return "https://#{current_organization.host}/" unless Rails.env.development?
+
+        "http://#{current_organization.host}:3000"
+      end
     end
   end
 end
