@@ -22,15 +22,22 @@ module Decidim
       end
 
       def organization_asset_url(asset)
-        "#{organization_host}#{asset_pack_url(asset)}"
+        asset_pack_url(asset, host: organization_root_url)
       end
 
       private
 
-      def organization_host
-        port = Rails.env.development? ? 3000 : nil
+      def organization_root_url
+        @organization_root_url ||= decidim.root_url(host: organization_host)
+      end
 
-        decidim.root_url(host: current_organization.host, port: port).to_s.gsub(%r{/$}, "")
+      def organization_host
+        port = 3000
+        @organization_host = if Rails.env.development?
+                               "#{current_organization.host}:#{port}"
+                             else
+                               current_organization.host
+                             end
       end
     end
   end
