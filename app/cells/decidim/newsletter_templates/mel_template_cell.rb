@@ -33,11 +33,11 @@ module Decidim
 
       def organization_host
         port = 3000
-        @organization_host = if Rails.env.development?
-                               "#{current_organization.host}:#{port}"
-                             else
-                               current_organization.host
-                             end
+        @organization_host ||= if Rails.env.development?
+                                 "#{current_organization.host}:#{port}"
+                               else
+                                 current_organization.host
+                               end
       end
     end
   end
