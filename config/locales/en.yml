@@ -15,11 +15,6 @@ en:
       destroy:
         error: Error
         success: Success
-    admin:
-      participatory_space_private_users:
-        create:
-          error: Error
-          success: Success
     amendments:
       emendation:
         announcement:
