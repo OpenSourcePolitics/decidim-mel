@@ -15,11 +15,6 @@ fr:
       destroy:
         error: Votre compte a été supprimé avec succès.
         success: Il y a eu un problème lors de la suppression de votre compte.
-    admin:
-      participatory_space_private_users:
-        create:
-          error: Erreur
-          success: Succès
     amendments:
       emendation:
         announcement:
