@@ -35,6 +35,10 @@ module DevelopmentApp
       "X-Content-Type-Options" => "nosniff"
     }
 
+    config.after_initialize do
+      require "extends/controllers/decidim/editor_images_controller_extends"
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
