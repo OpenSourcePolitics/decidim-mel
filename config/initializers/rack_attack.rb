@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-if Rails.env.production?
-  class Rack::Attack
-    throttle("req/ip", limit: Decidim.throttling_max_requests, period: Decidim.throttling_max_requests) do |req|
-      Rails.logger.warn("[Rack::Attack] [THROTTLE - req / ip] :: #{req.ip} :: #{req.path} :: #{req.GET}")
-      req.ip unless req.path.start_with?("/assets")
-    end
-  end
-end
+require "decidim_app/rack_attack"
+require "decidim_app/rack_attack/throttling"
+require "decidim_app/rack_attack/fail2ban"
+
+# Enabled by default in production
+# Can be deactivated with 'ENABLE_RACK_ATTACK=0'
+DecidimApp::RackAttack.apply_configuration if DecidimApp::RackAttack.rack_enabled?
