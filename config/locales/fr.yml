@@ -13,8 +13,8 @@ fr:
       skip_button: Passer au contenu principal
     account:
       destroy:
-        error: Votre compte a été supprimé avec succès.
-        success: Il y a eu un problème lors de la suppression de votre compte.
+        error: Une erreur est survenue lors de la suppression du compte
+        success: Compte supprimé avec succès
     amendments:
       emendation:
         announcement:
@@ -63,7 +63,7 @@ fr:
         body_preview: 'Faux texte pour le contenu: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
         mel_template_settings_form:
           show:
-            body: Corps du texte
+            body: Contenu principal
             interpolations_hint: 'Astuce : Vous pouvez utiliser "% {name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
         menu_item_1:
           icon: "\U0001F590"
@@ -71,7 +71,7 @@ fr:
           text: Participez aux concertations
         menu_item_2:
           icon: "\U0001F91D"
-          link: http://www.conseildeveloppement-lillemetropole.fr/
+          link: https://www.conseildeveloppement-lillemetropole.fr/
           text: Conseil de développement
         menu_item_3:
           icon: "\U0001F4CA"
@@ -91,7 +91,7 @@ fr:
           link: https://franceconnect.gouv.fr/
           text: Qu'est-ce-que FranceConnect ?
         forgot_password:
-          ok_text: Warning, this password is the one of your local account and in no case the one of the account you use through FranceConnect. It will only be used when you log in with your email address rather than via FranceConnect.
+          ok_text: Attention, ce mot de passe est celui de votre compte local et en aucun cas celui du compte que vous utilisez au travers de FranceConnect. Il vous servira uniquement lorsque vous vous connecterez avec votre adresse mail plutôt que via FranceConnect.
     proposals:
       create:
         error: Il y a eu des erreurs lors de la sauvegarde de la proposition.
@@ -116,9 +116,9 @@ fr:
           has_supports: Cette proposition ne peut pas être retirée car elle dispose déjà de supports.
     shared:
       login_modal:
-        close_modal: Close modal
-        please_sign_in: Please sign in
-        sign_up: Sign up
+        close_modal: Fermer
+        please_sign_in: Veuillez vous connecter
+        sign_up: Créer un compte
     system:
       organizations:
         omniauth_settings:
@@ -149,8 +149,8 @@ fr:
       authorizations:
         first_login:
           actions:
-            osp_authorization_handler: Vérifier avec le formulaire de vérification de l'identité
-            osp_authorization_workflow: Vérifier avec le formulaire de vérification de l'identité
+            osp_authorization_handler: Vérifier avec le formulaire de vérification d'identité
+            osp_authorization_workflow: Vérifier avec la procédure d'autorisation
   devise:
     passwords:
       new:
@@ -186,7 +186,18 @@ fr:
         navigation: Navigation
         sign_in: Se connecter
         sign_up: S'inscrire
+        user_menu: Menu utilisateur
       user_menu:
         account: Mon compte
+        admin_dashboard: Admin dashboard
         conversations: Conversations
         notifications: Notifications
+        profile: Profil
+        public_profile: Profile public
+        sign_out: Déconnexion
+  rack_attack:
+    too_many_requests:
+      message: Il semblerait que vous fassiez trop de requetes sur notre serveur, votre connexion a ete ralentie.
+      time: 'Vous pourrez naviguer de nouveau sur notre plateforme dans :'
+      time_unit: seconds
+      title: Thank you for your participation on %{organization_name}
