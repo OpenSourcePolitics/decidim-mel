@@ -10,7 +10,7 @@ fr:
         private_space: Espace privé
   decidim:
     accessibility:
-      skip_button: Passer au contenu
+      skip_button: Passer au contenu principal
     account:
       destroy:
         error: Une erreur est survenue lors de la suppression du compte
@@ -33,7 +33,7 @@ fr:
         name: Procédure d'autorisation
     core:
       actions:
-        unauthorized: Non autorisé
+        unauthorized: Vous n'êtes pas autorisé à effectuer cette action.
     devise:
       sessions:
         new:
@@ -59,28 +59,28 @@ fr:
           notification_title: Le participant <a href="%{resource_path}">%{resource_title}</a> a tenté de se faire vérifier avec les données de l'utilisateur représenté <a href="%{managed_user_path}">%{managed_user_name}</a>.
     newsletter_templates:
       mel_template:
-        alt_banner_image: Alt banner image
+        alt_banner_image: MEL - À vous la parole !
         body_preview: 'Faux texte pour le contenu: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh, sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna, sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. Vestibulum in mollis mi. Morbi eros erat, cursus ut tortor sit amet, imperdiet dapibus arcu. Suspendisse id egestas enim. In eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
         mel_template_settings_form:
           show:
             body: Contenu principal
-            interpolations_hint: Indice d'interpolation
+            interpolations_hint: 'Astuce : Vous pouvez utiliser "% {name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
         menu_item_1:
-          icon: Icône
-          link: Lien
-          text: Texte
+          icon: "\U0001F590"
+          link: https://participation.lillemetropole.fr/processes
+          text: Participez aux concertations
         menu_item_2:
-          icon: Icône
-          link: Lien
-          text: Texte
+          icon: "\U0001F91D"
+          link: https://www.conseildeveloppement-lillemetropole.fr/
+          text: Conseil de développement
         menu_item_3:
-          icon: Icône
-          link: Lien
-          text: Texte
-        name: Modèle de courriel
+          icon: "\U0001F4CA"
+          link: https://opendata.lillemetropole.fr/explore/?refine.theme=Participation+citoyenne&sort=modified
+          text: Consultez les données de participation en Open Data
+        name: MEL basique
       mel_template_settings_form:
-        body: Body
-        interpolations_hint: Indice d'interpolation
+        body: Corps du texte
+        interpolations_hint: 'Astuce : Vous pouvez utiliser "% {name}" n''importe où dans le corps ou le sujet et il sera remplacé par le nom du destinataire.'
         show:
           body: Contenu principal
           interpolations_hint: Interpolation
@@ -94,26 +94,26 @@ fr:
           ok_text: Attention, ce mot de passe est celui de votre compte local et en aucun cas celui du compte que vous utilisez au travers de FranceConnect. Il vous servira uniquement lorsque vous vous connecterez avec votre adresse mail plutôt que via FranceConnect.
     proposals:
       create:
-        error: Une erreur s'est produite lors de la création
-        success: Proposition créée avec succès.
+        error: Il y a eu des erreurs lors de la sauvegarde de la proposition.
+        success: Proposition créée avec succès. Enregistrée comme brouillon.
       destroy_draft:
-        error: Une erreur s'est produite lors de la suppression
-        success: Proposition supprimée avec succès.
+        error: Des erreurs sont survenues lors de la suppression du brouillon de la proposition.
+        success: Le brouillon de la proposition a bien été supprimé.
       proposals:
         compare:
-          no_similars_found: Aucune proposition similaire trouvée
+          no_similars_found: Bien joué ! Aucune proposition similaire n'a été trouvée
       publish:
-        error: Une erreur s'est produite lors de la publication
+        error: Il y a eu des erreurs lors de la publication de la proposition.
         success: Proposition publiée avec succès.
       update:
-        error: Une erreur s'est produite lors de la mise à jour
+        error: Des erreurs se sont produites lors de l'enregistrement de la proposition.
         success: Proposition mise à jour avec succès.
       update_draft:
-        error: Une erreur s'est produite lors de la mise à jour
-        success: Proposition mise à jour avec succès.
+        error: Des erreurs sont survenues lors de l'enregistrement du brouillon de la proposition.
+        success: Le brouillon de proposition a été mis à jour.
       withdraw:
         errors:
-          has_supports: Vous ne pouvez pas retirer une proposition qui a des soutiens.
+          has_supports: Cette proposition ne peut pas être retirée car elle dispose déjà de supports.
     shared:
       login_modal:
         close_modal: Fermer
