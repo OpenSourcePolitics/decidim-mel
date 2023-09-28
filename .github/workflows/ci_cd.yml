@@ -82,7 +82,7 @@ jobs:
           bundle exec rake assets:precompile
       - run: mkdir -p ./spec/tmp/screenshots
         name: Create the screenshots folder
-      - uses: nanasess/setup-chromedriver@v1.0.1
+      - uses: nanasess/setup-chromedriver@v2
       - run: bundle exec rspec
         name: RSpec
       - run: ./.github/upload_coverage.sh $DECIDIM_MODULE $GITHUB_EVENT_PATH
