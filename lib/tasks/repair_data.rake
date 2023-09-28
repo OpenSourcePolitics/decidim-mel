@@ -18,5 +18,37 @@ namespace :decidim do
 
       logger.info("Operation terminated")
     end
+
+    desc "Check for malformed comments body and repair them if needed"
+    task comments: :environment do
+      logger = Logger.new($stdout)
+      logger.info("Checking all comments...")
+
+      updated_comments_ids = Decidim::RepairCommentsService.run
+
+      if updated_comments_ids.blank?
+        logger.info("No comments updated")
+      else
+        logger.info("#{updated_comments_ids} comments updated")
+        logger.info("Updated comments ID : #{updated_comments_ids.join(",")}")
+      end
+
+      logger.info("Operation terminated")
+    end
+
+    desc "Add all missing translation for translatable resources"
+
+    task url_in_content: :environment do
+      logger = Logger.new($stdout)
+      deprecated_hosts = ENV["DEPRECATED_OBJECTSTORE_S3_HOSTS"].to_s.split(",").map(&:strip)
+
+      if deprecated_hosts.blank?
+        logger.warn("DEPRECATED_OBJECTSTORE_S3_HOSTS env variable is not set")
+      else
+        deprecated_hosts.each do |host|
+          Decidim::RepairUrlInContentService.run(host, logger)
+        end
+      end
+    end
   end
 end
