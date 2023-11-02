@@ -175,3 +175,6 @@ d71197d - Add nil safety in migrate task, 2022-04-20
 
 * `lib/decidim/test/promoted_participatory_processes_shared_examples.rb`
 f12c07d - Bump Develop on 0.25 (#104), 2022-05-10
+
+* `app/views/decidim/proposals/proposals/_edit_form_fields.html.erb`
+Modified from https://github.com/mainio/decidim-module-simple_proposal/blob/85ddd5f9519dc7d1e325a9776d6d5f134caf5943/app/views/decidim/proposals/proposals/_edit_form_fields.html.erb
