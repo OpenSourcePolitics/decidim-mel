@@ -7,12 +7,6 @@
 ## Load decidim-awesome assets only if dependencie is present
 * `app/views/layouts/decidim/_head.html.erb:33`
 
-## Fix geocoded proposals
-* `app/controllers/decidim/proposals/proposals_controller.rb:44`
-```ruby
-          @all_geocoded_proposals = @base_query.geocoded.where.not(latitude: Float::NAN, longitude: Float::NAN)
-```
-
 ## Fix meetings orders in indexes
 * `app/controllers/decidim/meetings/meetings_controller.rb`
 * `app/controllers/decidim/meetings/directory/meetings_controller.rb`
@@ -178,3 +172,6 @@ f12c07d - Bump Develop on 0.25 (#104), 2022-05-10
 
 * `app/views/decidim/proposals/proposals/_edit_form_fields.html.erb`
 Modified from https://github.com/mainio/decidim-module-simple_proposal/blob/85ddd5f9519dc7d1e325a9776d6d5f134caf5943/app/views/decidim/proposals/proposals/_edit_form_fields.html.erb
+
+* `app/controllers/concerns/decidim/simple_proposal/proposals_controller_override.rb`
+Modified from https://github.com/mainio/decidim-module-simple_proposal/blob/85ddd5f9519dc7d1e325a9776d6d5f134caf5943/app/controllers/concerns/decidim/simple_proposal/proposals_controller_override.rb
