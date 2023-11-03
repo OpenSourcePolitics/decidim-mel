@@ -28,6 +28,18 @@
   </div>
 <% end %>
 
+<% if @form.categories_enabled? %>
+  <div class="field">
+    <%= form.categories_select :category_id, @form.categories, include_blank: t("decidim.proposals.proposals.edit.select_a_category") %>
+  </div>
+<% end %>
+
+<% if @form.scopes_enabled? %>
+  <div class="field">
+    <%= scopes_picker_field form, :scope_id, root: current_component.scope, options: { checkboxes_on_top: true, selected: @form.scope&.id } %>
+  </div>
+<% end %>
+
 <% if @form.geocoding_enabled? %>
   <div class="field">
     <%= form.check_box :has_address, checked: form_has_address? %>
@@ -39,18 +51,6 @@
       <%= render partial: "dynamic_map_instructions" %>
       <%= dynamic_map_for proposal_preview_data_for_map(@proposal) %>
     </div>
-  </div>
-<% end %>
-
-<% if @form.categories_enabled? %>
-  <div class="field">
-    <%= form.categories_select :category_id, @form.categories, include_blank: t("decidim.proposals.proposals.edit.select_a_category") %>
-  </div>
-<% end %>
-
-<% if @form.scopes_enabled? %>
-  <div class="field">
-    <%= scopes_picker_field form, :scope_id, root: current_component.scope, options: { checkboxes_on_top: true, selected: @form.scope&.id } %>
   </div>
 <% end %>
 
