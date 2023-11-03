@@ -16,7 +16,7 @@ gem "decidim-templates", "~> #{DECIDIM_VERSION}.0"
 
 # External Decidim gems
 gem "decidim-cache_cleaner"
-gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "release/0.26-stable"
+gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: DECIDIM_BRANCH
 # TODO : Port the feature on official decidim-decidim_awesome repository and update this Gemfile
 gem "decidim-decidim_awesome", git: "https://github.com/octree-gva/decidim-module-decidim_awesome.git", branch: "feat/awesome_decidim_private_fields"
 gem "decidim-friendly_signup", git: "https://github.com/OpenSourcePolitics/decidim-module-friendly_signup.git"
