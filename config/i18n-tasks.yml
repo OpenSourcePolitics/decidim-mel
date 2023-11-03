@@ -94,6 +94,7 @@ ignore_missing:
  - devise.shared.links.sign_in_with_provider
  - decidim.editor_images.create.error
  - decidim.editor_images.create.success
+ - decidim.proposals.proposals.form_view.cancel
 
 # Consider these keys used:
 ignore_unused:
@@ -116,3 +117,4 @@ ignore_unused:
   - decidim.events.verifications.*
   - decidim.system.organizations.omniauth_settings.*
   - decidim.newsletter_templates.*
+  - decidim.proposals.proposals.form_view.cancel

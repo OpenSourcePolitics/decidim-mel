@@ -17,9 +17,10 @@ gem "decidim-templates", "~> #{DECIDIM_VERSION}.0"
 # External Decidim gems
 gem "decidim-cache_cleaner"
 gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: DECIDIM_BRANCH
-gem "decidim-decidim_awesome"
+# TODO : Port the feature on official decidim-decidim_awesome repository and update this Gemfile
+gem "decidim-decidim_awesome", git: "https://github.com/octree-gva/decidim-module-decidim_awesome.git", branch: "feat/awesome_decidim_private_fields"
 gem "decidim-friendly_signup", git: "https://github.com/OpenSourcePolitics/decidim-module-friendly_signup.git"
-gem "decidim-phone_authorization_handler", git: "https://github.com/OpenSourcePolitics/decidim-module_phone_authorization_handler", branch: DECIDIM_BRANCH
+gem "decidim-phone_authorization_handler", git: "https://github.com/OpenSourcePolitics/decidim-module_phone_authorization_handler", branch: "0.26/without-exports"
 gem "decidim-spam_detection"
 gem "decidim-term_customizer", git: "https://github.com/armandfardeau/decidim-module-term_customizer.git", branch: "fix/precompile-on-docker-0.26"
 
