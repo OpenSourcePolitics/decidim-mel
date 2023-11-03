@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe FactoryBot, processing_uploads_for: Decidim::AttachmentUploader do
   it "has 100% valid factories" do
-    # TODO fix engine factories
+    # TODO: fix engine factories
     # expect { described_class.lint(traits: true) }.not_to raise_error
   end
 end
