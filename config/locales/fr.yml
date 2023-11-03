@@ -102,6 +102,8 @@ fr:
           delete_image: Supprimer l'image
           gallery_legend: Description de la galerie
           select_a_category: Sélectionner une catégorie
+        form_view:
+          cancel: Annuler
         placeholder:
           address: Adresse
       update:
