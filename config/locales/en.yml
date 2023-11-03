@@ -93,27 +93,23 @@ en:
         forgot_password:
           ok_text: Warning, this password is the one of your local account and in no case the one of the account you use through FranceConnect. It will only be used when you log in with your email address rather than via FranceConnect.
     proposals:
-      create:
-        error: There was a problem saving
-        success: Success
-      destroy_draft:
-        error: Error
-        success: Success
       proposals:
-        compare:
-          no_similars_found: No similars found
-      publish:
-        error: Error
-        success: Success
+        edit:
+          add_documents: Add documents
+          add_images: Add images
+          attachment_legend: Attachment legend
+          delete_document: Delete document
+          delete_image: Delete image
+          gallery_legend: Gallery legend
+          select_a_category: Select a category
+        placeholder:
+          address: Address
       update:
         error: There was a problem saving
         success: Proposal successfully updated.
       update_draft:
         error: There was a problem saving
         success: Success
-      withdraw:
-        errors:
-          has_supports: This proposal can not be withdrawn because it already has supports.
     shared:
       login_modal:
         close_modal: Fermer
