@@ -37,12 +37,14 @@ module Decidim
       let!(:last_subscope) { create(:scope, name: { en: "ZZZ subscope" }, parent: first_scope, organization: organization) }
       let!(:middle_subscope) { create(:scope, name: { en: "DDD subscope" }, parent: first_scope, organization: organization) }
       let(:expected) { [first_scope, last_scope] }
+      let!(:not_in_organization) { create(:scope) }
 
       it "returns the scopes with no parent" do
         actual = helper.send(:ancestors, organization)
 
         expect(actual.count).to eq(2)
         expect(actual).to eq(expected)
+        expect(actual).not_to include(not_in_organization)
       end
     end
 
