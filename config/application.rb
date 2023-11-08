@@ -49,6 +49,8 @@ module DevelopmentApp
     end
 
     config.after_initialize do
+      Decidim::ScopesHelper.include Decidim::ScopesHelperExtend
+
       Decidim::GraphiQL::Rails.config.tap do |config|
         config.initial_query = "{\n  deployment {\n    version\n    branch\n    remote\n    upToDate\n    currentCommit\n    latestCommit\n    locallyModified\n  }\n}".html_safe
       end
