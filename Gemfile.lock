@@ -29,15 +29,6 @@ GIT
       omniauth-oauth2 (>= 1.7.2, < 2.0)
 
 GIT
-  remote: https://github.com/armandfardeau/decidim-module-term_customizer.git
-  revision: 63170f69b51bb7e7f60f20856e944ae1357f4dc7
-  branch: fix/precompile-on-docker-0.26
-  specs:
-    decidim-term_customizer (0.26.0)
-      decidim-admin (~> 0.26.0)
-      decidim-core (~> 0.26.0)
-
-GIT
   remote: https://github.com/mainio/decidim-module-simple_proposal
   revision: b91e238151ec818896bb77d296313406adce7880
   branch: release/0.26-stable
@@ -55,6 +46,15 @@ GIT
       decidim-admin (>= 0.26.0, < 0.28)
       decidim-core (>= 0.26.0, < 0.28)
       sassc (~> 2.3)
+
+GIT
+  remote: https://github.com/opensourcepolitics/decidim-module-term_customizer.git
+  revision: 11724f312f77a0a9199d0c79538058e0e5ae10c8
+  branch: fix/multi-threading-compliant-0.26
+  specs:
+    decidim-term_customizer (0.26.0)
+      decidim-admin (~> 0.26.0)
+      decidim-core (~> 0.26.0)
 
 GIT
   remote: https://github.com/sgruhier/foundation_rails_helper.git
