@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => "/sidekiq"
   end
 
+  get "/open-data/download", to: redirect("/404")
+  post "/open-data/download", to: redirect("/404")
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   mount Decidim::Core::Engine => "/"
