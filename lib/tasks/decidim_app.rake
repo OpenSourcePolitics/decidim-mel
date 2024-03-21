@@ -35,6 +35,7 @@ namespace :decidim_app do
     task install: :environment do
       puts "Running db:migrate"
       Rake::Task["db:migrate"].invoke
+      Rake::Task["decidim:awesome:private_fields"].invoke
     end
 
     # This task is used to upgrade your decidim-app to the latest version
@@ -44,6 +45,7 @@ namespace :decidim_app do
     task upgrade: :environment do
       puts "Running db:migrate"
       Rake::Task["db:migrate"].invoke
+      Rake::Task["decidim:awesome:private_fields"].invoke
     end
 
     desc "usage: bundle exec rails k8s:dump_db"
