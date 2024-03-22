@@ -39,7 +39,7 @@ GIT
 
 GIT
   remote: https://github.com/octree-gva/decidim-module-decidim_awesome.git
-  revision: 21ce064a26837ba43835621ddb6f6773b14c59e8
+  revision: afa824a79faa42f99eee5c0dcb4944e3a78b4a1d
   branch: feat/awesome_decidim_private_fields
   specs:
     decidim-decidim_awesome (0.9.2)

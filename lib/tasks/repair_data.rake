@@ -51,4 +51,35 @@ namespace :decidim do
       end
     end
   end
+
+  namespace :awesome do
+    desc "Migrate private fields from old proposals to new ones"
+    task private_fields: :environment do
+      Rails.logger.info("Migrating private fields from old proposals to new ones")
+
+      proposals = Decidim::Proposals::Proposal.where(
+        "private_body != ? AND private_body != ?",
+        "<xml></xml>", "{}"
+      ).pluck(:id, :private_body)
+
+      Rails.logger.info("Preparing to migrate #{proposals.count} proposals")
+      creations = proposals.map do |proposal_id, private_body|
+        creation = Decidim::DecidimAwesome::PrivateProposalField.create(
+          proposal_id: proposal_id,
+          private_body: private_body
+        )
+
+        [proposal_id, creation]
+      end
+
+      if creations.any? { |_, creation| creation.invalid? }
+        proposal_ids = creations.select { |ary| ary.last.invalid? }.map(&:first)
+        Rails.logger.error("Failed to migrate #{proposal_ids.count} proposals")
+        Rails.logger.error("Failed proposals ID : #{proposal_ids.join(", ")}")
+        return
+      end
+
+      Rails.logger.info("Migrated #{creations.count} proposals")
+    end
+  end
 end
