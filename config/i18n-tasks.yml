@@ -118,3 +118,4 @@ ignore_unused:
   - decidim.system.organizations.omniauth_settings.*
   - decidim.newsletter_templates.*
   - decidim.proposals.proposals.form_view.cancel
+  - decidim.proposals.admin.exports.private_proposals
